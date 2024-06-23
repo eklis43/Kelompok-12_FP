@@ -158,4 +158,4 @@ datamart2_to = DummyOperator(task_id="datamart2_to", dag=dag)
 datamart3_to = DummyOperator(task_id="datamart3_to", dag=dag)
 datamart4_to = DummyOperator(task_id="datamart4_to", dag=dag)
 
-transform_to >> transform_bronze_to_silver_tasks >> datamart_to >> datamart_to_gold_tasks >> datamart1_to >> datamart1_to_gold_tasks >> datamart2_to >> datamart2_to_gold_tasks>> datamart3_to >> datamart3_to_gold_tasks >> datamart4_to >> datamart4_to_gold_tasks
+extract_to_bronze_tasks >> transform_to >> transform_bronze_to_silver_tasks >> datamart_to >> datamart_to_gold_tasks >> datamart1_to >> datamart1_to_gold_tasks >> datamart2_to >> datamart2_to_gold_tasks>> datamart3_to >> datamart3_to_gold_tasks >> datamart4_to >> datamart4_to_gold_tasks
