@@ -3,7 +3,9 @@ CREATE TABLE gold.gender_product_category AS
 WITH customer_product_category AS (
     SELECT 
         c.gender,
-        pc.name AS product_category
+        pc.name AS product_category,
+        p.price_label
+        
     FROM 
         silver.customer c
     JOIN 
@@ -18,11 +20,12 @@ WITH customer_product_category AS (
 SELECT
     product_category,
     gender,
+    price_label,
     COUNT(*) AS product_count,
-    ROUND(100.0 * COUNT(*) / SUM(COUNT(*)) OVER (PARTITION BY product_category), 2) AS proportion
+    ROUND(100.0 * COUNT(*) / SUM(COUNT(*)) OVER (PARTITION BY product_category, price_label), 2) AS proportion
 FROM
     customer_product_category
 GROUP BY
-    product_category, gender
+    product_category, gender, price_label
 ORDER BY
-    product_category, gender;
+    product_category, price_label, gender;
