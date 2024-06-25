@@ -36,9 +36,9 @@ Di folder utama, kita dapat menemukan makefile, jika ingin mengotomatiskan skrip
 
 Ada juga requirements.txt, jadi jika Anda ingin menambahkan perpustakaan ke wadah Airflow, Anda bisa mencoba menambahkannya di sana. Setelah Anda menambahkan nama perpustakaan dalam file, pastikan Anda membangun kembali gambar sebelum memutar wadahnya.
 
-2m dag
+2. dag
 
-Di sinilah Anda meletakkan file dag Anda. Folder ini sudah terpasang di penampung, sehingga pembaruan apa pun di sini akan otomatis berlaku di sisi penampung.
+Di sinilah Anda meletakkan file dag Anda. Folder ini sudah terpasang di penampung, sehingga pembaruan apa pun di sini akan otomatis berlaku di sisi penampung. Folder ini juga berisikan data warehouse atau silver dan data mart atau gold dalam bentuk sql. 
 
 3. data
 
