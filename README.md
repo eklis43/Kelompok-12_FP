@@ -11,7 +11,7 @@ Kelompok 12
 
 How To
 
-Tujuan kami meminimalkan resource , dan kelompok ini menggunakan database cloud gratis di NEON. Setelah kita membuat database di dalamnya, ambil string koneksi dan masukkan ke dalam variabel DW_POSTGRES_URI di .env
+Tujuan kami meminimalkan resource , dan kelompok ini menggunakan database cloud gratis di NEON. Setelah kita membuat database di dalamnya, ambil string koneksi dan masukkan ke dalam variabel DW_POSTGRES_URI di .env . 
  
 DW_POSTGRES_URI="postgresql://neondb_owner:SCzLXNE3r9YT@ep-icy-silence-a5cwtr8m.us-east-2.aws.neon.tech/neondb?sslmode=require"
 
@@ -23,8 +23,8 @@ Setelah semua gambar dibuat, kita dapat mencoba memutar containernya
 
 make spinup
 
-Setelah semua container siap, kita dapat menggunakannya
+Setelah semua container siap, kita dapat menggunakannya. 
 
 Akses the Airflow on port 8081
-Akses Metabase pada port 3001, untuk username dan passwordnya bisa coba akses file .env
-Jika tidak menemukan tabel yang dibuat di data Metabase Telusuri, Anda dapat mencoba menyinkronkannya melalui UI admin Metabase
+Akses Metabase pada port 3001, untuk username dan passwordnya bisa coba akses file .env . 
+Jika tidak menemukan tabel yang dibuat di data Metabase Telusuri, Anda dapat mencoba menyinkronkannya melalui UI admin Metabase. 
