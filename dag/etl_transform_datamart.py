@@ -69,6 +69,7 @@ dag = DAG(
 )
 
 # TASK
+# INGESTION
 extract_to_bronze_tasks = []
 for config in CONFIG['ingestion']:
     extract_to_bronze = PythonOperator(
@@ -83,6 +84,7 @@ for config in CONFIG['ingestion']:
 
     extract_to_bronze_tasks.append(extract_to_bronze)
 
+#TRANSFORM
 transform_bronze_to_silver_tasks = []
 for config in CONFIG['transformation']:
     transform_bronze_to_silver = PostgresOperator(
@@ -94,7 +96,7 @@ for config in CONFIG['transformation']:
 
     transform_bronze_to_silver_tasks.append(transform_bronze_to_silver)
 
-
+#DATAMART
 datamart_to_gold_tasks = []
 for config in CONFIG['datamart']:
     datamart_to_gold = PostgresOperator(
